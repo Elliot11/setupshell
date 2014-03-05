@@ -33,3 +33,5 @@ sudo sublime /usr/share/applications/defaults.list
 
 #make ambience have windows easier to resize
 #http://askubuntu.com/questions/4109/how-do-i-increase-the-resize-margin-on-windows
+
+#configure terminal as login shell
