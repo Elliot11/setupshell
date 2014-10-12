@@ -112,3 +112,12 @@ development:
   pool: 5
   username: username #on mac this is your username
   password: #on mac the default is blank
+
+#creating a postgres user on ubuntu
+su - postgres #switch to the postgres user
+psql #enter the postgres commandline
+#create use with USERNAME and create database and login rights
+create user USERNAME with createdb login encrypted password 'PASSWORD'
+#edit the following file and change 
+#local   all         postgres                          md5
+vim /etc/postgresql/9.3/main/pg_hba.conf
