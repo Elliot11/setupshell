@@ -122,3 +122,5 @@ create user USERNAME with createdb login encrypted password 'PASSWORD'
 #edit the following file and change 
 #local   all         postgres                          md5
 vim /etc/postgresql/9.3/main/pg_hba.conf
+
+rake db:reset RAILS_ENV=production
