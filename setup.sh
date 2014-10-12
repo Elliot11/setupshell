@@ -3,6 +3,7 @@
 sudo apt-get update
 sudo apt-get install curl
 \curl -L https://get.rvm.io | bash -s stable
+#there is a different source command for new rvm, however it is shown in the console log. 
 source ~/.rvm/scripts/rvm
 rvm requirements
 
@@ -35,3 +36,7 @@ sudo sublime /usr/share/applications/defaults.list
 #http://askubuntu.com/questions/4109/how-do-i-increase-the-resize-margin-on-windows
 
 #configure terminal as login shell
+
+
+#install Phusion Passenger
+https://www.phusionpassenger.com/documentation/Users%20guide%20Nginx.html#install_on_debian_ubuntu
