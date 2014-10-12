@@ -116,6 +116,7 @@ development:
 #creating a postgres user on ubuntu
 su - postgres #switch to the postgres user
 psql #enter the postgres commandline
+#http://www.postgresql.org/docs/8.1/static/sql-createrole.html
 #create use with USERNAME and create database and login rights
 create user USERNAME with createdb login encrypted password 'PASSWORD'
 #edit the following file and change 
