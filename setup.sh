@@ -86,3 +86,12 @@ gem install pg
 brew update
 brew doctor
 brew install postgres
+
+#Postgres configuration
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: blog_development
+  pool: 5
+  username: username #on mac this is your username
+  password: #on mac the default is blank
