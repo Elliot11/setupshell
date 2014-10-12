@@ -71,6 +71,23 @@ sudo apt-get install nginx-extras passenger
 
 sudo service nginx restart
 
+#configure sites-enabled with friendly error messages
+server {
+        listen 80;
+
+        root /home/basicapp/public;
+
+        # Make site accessible from http://localhost/
+        server_name localhost;
+        passenger_enabled on;
+        passenger_friendly_error_pages on;
+}
+
+
+#configure nginx/nginx.conf
+passenger_root /usr/local/rvm/gems/ruby-2.1.3/gems/passenger-4.0.53;
+passenger_ruby /usr/local/rvm/gems/ruby-2.1.3/wrappers/ruby;
+
 #Specify a SECRET_KEY_BASE
 export SECRET_KEY_BASE=******************
 
