@@ -76,3 +76,13 @@ export SECRET_KEY_BASE=******************
 
 #test your app in the production environment
 rails s -e production
+
+#Installing Postgres
+apt-get install postgresql-9.3
+sudo apt-get install libpq-dev
+gem install pg
+
+#Install Postgres on Mac
+brew update
+brew doctor
+brew install postgres
