@@ -39,4 +39,34 @@ sudo sublime /usr/share/applications/defaults.list
 
 
 #install Phusion Passenger
-https://www.phusionpassenger.com/documentation/Users%20guide%20Nginx.html#install_on_debian_ubuntu
+#https://www.phusionpassenger.com/documentation/Users%20guide%20Nginx.html#install_on_debian_ubuntu
+sudo apt-get install libcurl4-openssl-dev 
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 561F9B9CAC40B2F7
+sudo apt-get install apt-transport-https ca-certificates
+
+cd /etc/apt/sources.list.d/
+touch passenger.list
+vim passenger.list
+
+##### !!!! Only add ONE of these lines, not all of them !!!! #####
+# Ubuntu 14.04
+deb https://oss-binaries.phusionpassenger.com/apt/passenger trusty main
+# Ubuntu 12.04
+deb https://oss-binaries.phusionpassenger.com/apt/passenger precise main
+# Ubuntu 10.04
+deb https://oss-binaries.phusionpassenger.com/apt/passenger lucid main
+# Debian 7
+deb https://oss-binaries.phusionpassenger.com/apt/passenger wheezy main
+# Debian 6
+deb https://oss-binaries.phusionpassenger.com/apt/passenger squeeze main
+
+sudo chown root: /etc/apt/sources.list.d/passenger.list
+sudo chmod 600 /etc/apt/sources.list.d/passenger.list
+sudo apt-get update
+
+sudo apt-get install nginx-extras passenger
+
+#Edit /etc/nginx/nginx.conf and uncomment passenger_root and passenger_ruby.
+
+sudo service nginx restart
