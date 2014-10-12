@@ -70,3 +70,9 @@ sudo apt-get install nginx-extras passenger
 #Edit /etc/nginx/nginx.conf and uncomment passenger_root and passenger_ruby.
 
 sudo service nginx restart
+
+#Specify a SECRET_KEY_BASE
+export SECRET_KEY_BASE=******************
+
+#test your app in the production environment
+rails s -e production
