@@ -124,3 +124,6 @@ create user USERNAME with createdb login encrypted password 'PASSWORD'
 vim /etc/postgresql/9.3/main/pg_hba.conf
 
 rake db:reset RAILS_ENV=production
+
+#Setting up Git on production
+sudo apt-get install git-core
