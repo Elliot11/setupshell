@@ -126,5 +126,8 @@ vim /etc/postgresql/9.3/main/pg_hba.conf
 
 rake db:reset RAILS_ENV=production
 
+#Rails assumes assets are precompiled in production, to precompile.
+RAILS_ENV=production bin/rake assets:precompile
+
 #Setting up Git on production
 sudo apt-get install git-core
