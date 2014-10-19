@@ -90,6 +90,7 @@ passenger_ruby /usr/local/rvm/gems/ruby-2.1.3/wrappers/ruby;
 
 #Specify a SECRET_KEY_BASE
 export SECRET_KEY_BASE=******************
+echo $SECRET_KEY_BASE #will return the value of secret key base
 
 #test your app in the production environment
 rails s -e production
