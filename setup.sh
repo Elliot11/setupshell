@@ -85,6 +85,7 @@ server {
 
 
 #configure nginx/nginx.conf
+passenger-config --ruby-command
 passenger_root /usr/local/rvm/gems/ruby-2.1.3/gems/passenger-4.0.53;
 passenger_ruby /usr/local/rvm/gems/ruby-2.1.3/wrappers/ruby;
 
