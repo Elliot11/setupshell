@@ -132,3 +132,7 @@ RAILS_ENV=production bin/rake assets:precompile
 
 #Setting up Git on production
 sudo apt-get install git-core
+
+chmod -R 777 .
+
+log location /var/log/nginx/error.log
